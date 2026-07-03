@@ -1,0 +1,606 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>SwiftX Shipping</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#f5f5f5;
+}
+
+
+/* HEADER */
+
+header{
+background:#4d148c;
+color:white;
+padding:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+
+.logo{
+font-size:35px;
+font-weight:bold;
+}
+
+
+.logo span{
+color:#ffcc00;
+}
+
+
+
+nav{
+display:flex;
+gap:25px;
+}
+
+
+
+.menu{
+position:relative;
+}
+
+
+
+.menu>a{
+
+display:block;
+
+padding-bottom:15px;
+
+color:white;
+
+text-decoration:none;
+
+font-size:18px;
+
+}
+
+
+
+/* FIXED DROPDOWN */
+
+.dropdown{
+
+display:none;
+
+position:absolute;
+
+top:35px;
+
+left:0;
+
+background:white;
+
+width:230px;
+
+box-shadow:0 5px 15px #aaa;
+
+border-radius:8px;
+
+overflow:hidden;
+
+z-index:20;
+
+}
+
+
+
+.menu:hover .dropdown,
+
+.dropdown:hover{
+
+display:block;
+
+}
+
+
+
+.dropdown a{
+
+display:block;
+
+padding:15px;
+
+color:#333;
+
+text-decoration:none;
+
+}
+
+
+
+.dropdown a:hover{
+
+background:#eee;
+
+color:#4d148c;
+
+}
+
+
+
+
+/* HERO */
+
+.hero{
+
+height:420px;
+
+background:
+
+linear-gradient(
+rgba(0,0,0,.5),
+rgba(0,0,0,.5)
+),
+
+url("https://images.unsplash.com/photo-1586528116493-da8e9f9c7d4f");
+
+
+background-size:cover;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+text-align:center;
+
+color:white;
+
+}
+
+
+
+.hero h1{
+
+font-size:45px;
+
+}
+
+
+
+
+/* TRACK */
+
+.track{
+
+background:white;
+
+width:80%;
+
+margin:-60px auto 40px;
+
+padding:30px;
+
+box-shadow:0 0 15px #aaa;
+
+border-radius:10px;
+
+}
+
+
+
+input{
+
+padding:15px;
+
+width:70%;
+
+font-size:18px;
+
+}
+
+
+
+button{
+
+padding:15px 30px;
+
+background:#ff6600;
+
+color:white;
+
+border:0;
+
+cursor:pointer;
+
+font-size:18px;
+
+}
+
+
+
+
+
+/* CARDS */
+
+.cards{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+}
+
+
+
+.card{
+
+background:white;
+
+width:250px;
+
+padding:30px;
+
+text-align:center;
+
+border-radius:10px;
+
+box-shadow:0 0 10px #ddd;
+
+}
+
+
+
+.card h2{
+
+color:#4d148c;
+
+}
+
+
+
+
+
+footer{
+
+background:#222;
+
+color:white;
+
+padding:30px;
+
+margin-top:50px;
+
+text-align:center;
+
+}
+
+
+
+</style>
+
+
+</head>
+
+
+
+<body>
+
+
+
+<header>
+
+
+<div class="logo">
+
+Swift<span>X</span>
+
+</div>
+
+
+
+<nav>
+
+
+<div class="menu">
+
+<a href="#">Shipping</a>
+
+
+<div class="dropdown">
+
+
+<a href="#">Create Shipment</a>
+
+
+
+
+
+
+<div class="submenu">
+
+<a href="https://www.fedex.com/en-us/open-account.html" target="_blank">
+Open Account
+</a>
+
+<a href="https://www.fedex.com/shippingplus/en-us/guest" target="_blank">
+Guest Shipment
+</a>
+
+</div>
+
+
+<a href="#">Shipping Rates</a>
+
+
+<a href="#">Schedule Pickup</a>
+
+
+<a href="#">Packing Supplies</a>
+
+
+<a href="#">International Shipping</a>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="menu">
+
+
+<a href="#">Tracking</a>
+
+
+<div class="dropdown">
+
+
+<a href="#">Track Package</a>
+
+
+<a href="#">Advanced Tracking</a>
+
+
+<a href="#">Delivery Updates</a>
+
+
+<a href="#">Shipment History</a>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="menu">
+
+
+<a href="#">Locations</a>
+
+
+<div class="dropdown">
+
+
+<a href="#">Find Location</a>
+
+
+<a href="#">Drop Off Package</a>
+
+
+<a href="#">Pickup Centers</a>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div class="menu">
+
+
+<a href="#">Support</a>
+
+
+<div class="dropdown">
+
+
+<a href="#">Customer Support</a>
+
+
+<a href="#">FAQ</a>
+
+
+<a href="#">Contact Us</a>
+
+
+<a href="#">Report Problem</a>
+
+
+</div>
+
+
+</div>
+
+
+
+</nav>
+
+
+</header>
+
+
+
+
+
+
+<section class="hero">
+
+
+<div>
+
+<h1>
+
+Ship. Track. Deliver.
+
+</h1>
+
+
+<p>
+
+Fast and reliable delivery worldwide
+
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<div class="track">
+
+
+<h2>
+
+Track Your Package
+
+</h2>
+
+
+<input id="code" placeholder="Enter Tracking ID">
+
+
+<button onclick="track()">
+
+TRACK
+
+</button>
+
+
+<p id="result"></p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<h2>Shipping</h2>
+
+<p>Create shipments easily and quickly.</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>Delivery</h2>
+
+<p>Fast delivery service anywhere.</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>Support</h2>
+
+<p>24/7 customer assistance.</p>
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<footer>
+
+© 2026 SwiftX Shipping
+
+</footer>
+
+
+
+
+
+
+<script>
+
+
+function track(){
+
+
+let code=document.getElementById("code").value;
+
+
+if(code==""){
+
+document.getElementById("result").innerHTML=
+
+"Please enter tracking ID";
+
+
+}
+
+else{
+
+
+document.getElementById("result").innerHTML=
+
+"Package "+code+" is currently being processed 🚚";
+
+
+}
+
+
+}
+
+
+</script>
+
+
+
+</body>
+
+</html>
